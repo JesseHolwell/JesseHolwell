@@ -4,7 +4,7 @@
     angular.module('BlurAdmin.pages', [
       'ui.router',
        'dndLists',
-      'BlurAdmin.pages.dashboard',
+      'BlurAdmin.pages.home',
 
     ])
     .config(routeConfig);
