@@ -130,9 +130,9 @@
   <ItemGroup>
     <Content Include="app\app.js" />
     <Content Include="assets\main.css" />
-    <Content Include="app\pages\dashboard\dashboard.html" />
-    <Content Include="app\pages\dashboard\dashboard.module.js" />
-    <Content Include="app\pages\dashboard\dashboardCtrl.js" />
+    <Content Include="app\pages\home\home.html" />
+    <Content Include="app\pages\home\home.module.js" />
+    <Content Include="app\pages\home\homeCtrl.js" />
     <Content Include="app\pages\pages.module.js" />
     <Content Include="app\theme\components\backTop\backTop.directive.js" />
     <Content Include="app\theme\components\backTop\backTop.html" />
