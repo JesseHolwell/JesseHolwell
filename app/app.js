@@ -24,6 +24,8 @@
             return errorString;
         }
 
+        $state.go("home");
+
     }).$inject = ['$rootScope'];
 
     BlurAdmin.filter('ifEmpty', function() {

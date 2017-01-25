@@ -5,6 +5,9 @@
       'ui.router',
        'dndLists',
       'BlurAdmin.pages.home',
+      'BlurAdmin.pages.about',
+      'BlurAdmin.pages.career',
+      'BlurAdmin.pages.contact',
 
     ])
     .config(routeConfig);

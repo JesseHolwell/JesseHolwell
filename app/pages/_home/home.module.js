@@ -9,12 +9,12 @@
     $stateProvider
         .state('home', {
             url: '/home',
-            templateUrl: 'app/pages/home/home.html',
+            templateUrl: 'app/pages/_home/home.html',
             title: 'Home',
             controller: 'homeCtrl',
           sidebarMeta: {
             icon: 'ion-android-home',
-            order: 0,
+            order: 10,
           },
         });
   }
