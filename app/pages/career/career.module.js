@@ -1,21 +1,22 @@
-(function () {
-  'use strict';
+(function() {
+    "use strict";
 
-    angular.module('BlurAdmin.pages.career', [])
-      .config(routeConfig);
+    angular.module("BlurAdmin.pages.career", [])
+        .config(routeConfig);
 
-  /** @ngInject */
-  function routeConfig($stateProvider) {
-    $stateProvider
-        .state('career', {
-            templateUrl: 'app/pages/career/career.html',
-            title: 'Career',
-            controller: 'careerCtrl',
-          sidebarMeta: {
-            icon: 'ion-android-home',
-            order: 30,
-          },
-        });
-  }
+    /** @ngInject */
+    function routeConfig($stateProvider) {
+        $stateProvider
+            .state("career",
+            {
+                templateUrl: "app/pages/career/career.html",
+                title: "Career",
+                controller: "careerCtrl",
+                sidebarMeta: {
+                    icon: "ion-briefcase",
+                    order: 30,
+                },
+            });
+    }
 
 })();

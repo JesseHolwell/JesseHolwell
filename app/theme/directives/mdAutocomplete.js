@@ -1,6 +1,6 @@
 ﻿angular
-    .module('BlurAdmin.theme')
-    .directive('mdAutocomplete', MdAutocomplete);
+    .module("BlurAdmin.theme")
+    .directive("mdAutocomplete", MdAutocomplete);
 
 /**
  * @ngdoc directive
@@ -129,37 +129,37 @@
 function MdAutocomplete($$mdSvgRegistry) {
 
     return {
-        controller: 'MdAutocompleteCtrl',
-        controllerAs: '$mdAutocompleteCtrl',
+        controller: "MdAutocompleteCtrl",
+        controllerAs: "$mdAutocompleteCtrl",
         scope: {
-            inputName: '@mdInputName',
-            inputMinlength: '@mdInputMinlength',
-            inputMaxlength: '@mdInputMaxlength',
-            searchText: '=?mdSearchText',
-            selectedItem: '=?mdSelectedItem',
-            itemsExpr: '@mdItems',
-            itemText: '&mdItemText',
-            placeholder: '@placeholder',
-            noCache: '=?mdNoCache',
-            selectOnMatch: '=?mdSelectOnMatch',
-            matchInsensitive: '=?mdMatchCaseInsensitive',
-            itemChange: '&?mdSelectedItemChange',
-            textChange: '&?mdSearchTextChange',
-            minLength: '=?mdMinLength',
-            delay: '=?mdDelay',
-            autofocus: '=?mdAutofocus',
-            floatingLabel: '@?mdFloatingLabel',
-            autoselect: '=?mdAutoselect',
-            menuClass: '@?mdMenuClass',
-            inputId: '@?mdInputId',
-            escapeOptions: '@?mdEscapeOptions'
+            inputName: "@mdInputName",
+            inputMinlength: "@mdInputMinlength",
+            inputMaxlength: "@mdInputMaxlength",
+            searchText: "=?mdSearchText",
+            selectedItem: "=?mdSelectedItem",
+            itemsExpr: "@mdItems",
+            itemText: "&mdItemText",
+            placeholder: "@placeholder",
+            noCache: "=?mdNoCache",
+            selectOnMatch: "=?mdSelectOnMatch",
+            matchInsensitive: "=?mdMatchCaseInsensitive",
+            itemChange: "&?mdSelectedItemChange",
+            textChange: "&?mdSearchTextChange",
+            minLength: "=?mdMinLength",
+            delay: "=?mdDelay",
+            autofocus: "=?mdAutofocus",
+            floatingLabel: "@?mdFloatingLabel",
+            autoselect: "=?mdAutoselect",
+            menuClass: "@?mdMenuClass",
+            inputId: "@?mdInputId",
+            escapeOptions: "@?mdEscapeOptions"
         },
-        link: function (scope, element, attrs, controller) {
+        link: function(scope, element, attrs, controller) {
             // Retrieve the state of using a md-not-found template by using our attribute, which will
             // be added to the element in the template function.
-            controller.hasNotFound = !!element.attr('md-has-not-found');
+            controller.hasNotFound = !!element.attr("md-has-not-found");
         },
-        template: function (element, attr) {
+        template: function(element, attr) {
             var noItemsTemplate = getNoItemsTemplate(),
                 itemTemplate = getItemTemplate(),
                 leftover = element.html(),
@@ -168,19 +168,23 @@ function MdAutocomplete($$mdSvgRegistry) {
             // Set our attribute for the link function above which runs later.
             // We will set an attribute, because otherwise the stored variables will be trashed when
             // removing the element is hidden while retrieving the template. For example when using ngIf.
-            if (noItemsTemplate) element.attr('md-has-not-found', true);
+            if (noItemsTemplate) element.attr("md-has-not-found", true);
 
             // Always set our tabindex of the autocomplete directive to -1, because our input
             // will hold the actual tabindex.
-            element.attr('tabindex', '-1');
+            element.attr("tabindex", "-1");
 
             return '\
         <md-autocomplete-wrap\
             layout="row"\
             ng-class="{ \'md-whiteframe-z1\': !floatingLabel, \'md-menu-showing\': !$mdAutocompleteCtrl.hidden }">\
-          ' + getInputElement() + '\
+          ' +
+                getInputElement() +
+                '\
           <md-progress-linear\
-              class="' + (attr.mdFloatingLabel ? 'md-inline' : '') + '"\
+              class="' +
+                (attr.mdFloatingLabel ? "md-inline" : "") +
+                '"\
               ng-if="$mdAutocompleteCtrl.loadingIsVisible()"\
               md-mode="indeterminate"></md-progress-linear>\
           <md-virtual-repeat-container\
@@ -200,8 +204,12 @@ function MdAutocomplete($$mdSvgRegistry) {
                   ng-class="{ selected: $index === $mdAutocompleteCtrl.index }"\
                   ng-click="$mdAutocompleteCtrl.select($index)"\
                   md-extra-name="$mdAutocompleteCtrl.itemName">\
-                  ' + itemTemplate + '\
-                  </li>' + noItemsTemplate + '\
+                  ' +
+                itemTemplate +
+                "\
+                  </li>" +
+                noItemsTemplate +
+                '\
             </ul>\
           </md-virtual-repeat-container>\
         </md-autocomplete-wrap>\
@@ -213,19 +221,23 @@ function MdAutocomplete($$mdSvgRegistry) {
         </aria-status>';
 
             function getItemTemplate() {
-                var templateTag = element.find('md-item-template').detach(),
+                var templateTag = element.find("md-item-template").detach(),
                     html = templateTag.length ? templateTag.html() : element.html();
                 if (!templateTag.length) element.empty();
-                return '<md-autocomplete-parent-scope md-autocomplete-replace>' + html + '</md-autocomplete-parent-scope>';
+                return "<md-autocomplete-parent-scope md-autocomplete-replace>" +
+                    html +
+                    "</md-autocomplete-parent-scope>";
             }
 
             function getNoItemsTemplate() {
-                var templateTag = element.find('md-not-found').detach(),
-                    template = templateTag.length ? templateTag.html() : '';
+                var templateTag = element.find("md-not-found").detach(),
+                    template = templateTag.length ? templateTag.html() : "";
                 return template
                     ? '<li ng-if="$mdAutocompleteCtrl.notFoundVisible()"\
-                         md-autocomplete-parent-scope>' + template + '</li>'
-                    : '';
+                         md-autocomplete-parent-scope>' +
+                    template +
+                    "</li>"
+                    : "";
 
             }
 
@@ -235,7 +247,9 @@ function MdAutocomplete($$mdSvgRegistry) {
             <md-input-container flex ng-if="floatingLabel">\
               <label>{{floatingLabel}}</label>\
               <input type="search"\
-                  ' + (tabindex != null ? 'tabindex="' + tabindex + '"' : '') + '\
+                  ' +
+                        (tabindex != null ? 'tabindex="' + tabindex + '"' : "") +
+                        '\
                   id="{{ inputId || \'fl-input-\' + $mdAutocompleteCtrl.id }}"\
                   name="{{inputName}}"\
                   autocomplete="off"\
@@ -247,22 +261,30 @@ function MdAutocomplete($$mdSvgRegistry) {
                   ng-model="$mdAutocompleteCtrl.scope.searchText"\
                   ng-keydown="$mdAutocompleteCtrl.keydown($event)"\
                   ng-blur="$mdAutocompleteCtrl.blur()"\
-                  ' + (attr.mdNoAsterisk != null ? 'md-no-asterisk="' + attr.mdNoAsterisk + '"' : '') + '\
+                  ' +
+                        (attr.mdNoAsterisk != null ? 'md-no-asterisk="' + attr.mdNoAsterisk + '"' : "") +
+                        '\
                   ng-focus="$mdAutocompleteCtrl.focus($event)"\
                   aria-owns="ul-{{$mdAutocompleteCtrl.id}}"\
-                  ' + (attr.mdSelectOnFocus != null ? 'md-select-on-focus=""' : '') + '\
+                  ' +
+                        (attr.mdSelectOnFocus != null ? 'md-select-on-focus=""' : "") +
+                        '\
                   aria-label="{{floatingLabel}}"\
                   aria-autocomplete="list"\
                   role="combobox"\
                   aria-haspopup="true"\
                   aria-activedescendant=""\
                   aria-expanded="{{!$mdAutocompleteCtrl.hidden}}"/>\
-              <div md-autocomplete-parent-scope md-autocomplete-replace>' + leftover + '</div>\
-            </md-input-container>';
+              <div md-autocomplete-parent-scope md-autocomplete-replace>' +
+                        leftover +
+                        "</div>\
+            </md-input-container>";
                 } else {
                     return '\
             <input flex type="search"\
-                ' + (tabindex != null ? 'tabindex="' + tabindex + '"' : '') + '\
+                ' +
+                        (tabindex != null ? 'tabindex="' + tabindex + '"' : "") +
+                        '\
                 id="{{ inputId || \'input-\' + $mdAutocompleteCtrl.id }}"\
                 name="{{inputName}}"\
                 ng-if="!floatingLabel"\
@@ -276,7 +298,9 @@ function MdAutocomplete($$mdSvgRegistry) {
                 ng-focus="$mdAutocompleteCtrl.focus($event)"\
                 placeholder="{{placeholder}}"\
                 aria-owns="ul-{{$mdAutocompleteCtrl.id}}"\
-                ' + (attr.mdSelectOnFocus != null ? 'md-select-on-focus=""' : '') + '\
+                ' +
+                        (attr.mdSelectOnFocus != null ? 'md-select-on-focus=""' : "") +
+                        '\
                 aria-label="{{placeholder}}"\
                 aria-autocomplete="list"\
                 role="combobox"\
@@ -288,7 +312,9 @@ function MdAutocomplete($$mdSvgRegistry) {
                 tabindex="-1"\
                 ng-if="$mdAutocompleteCtrl.scope.searchText && !$mdAutocompleteCtrl.isDisabled"\
                 ng-click="$mdAutocompleteCtrl.clear($event)">\
-              <md-icon md-svg-src="' + $$mdSvgRegistry.mdClose + '"></md-icon>\
+              <md-icon md-svg-src="' +
+                        $$mdSvgRegistry.mdClose +
+                        '"></md-icon>\
               <span class="_md-visually-hidden">Clear</span>\
             </button>\
                 ';

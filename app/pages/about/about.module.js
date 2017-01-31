@@ -1,21 +1,22 @@
-(function () {
-  'use strict';
+(function() {
+    "use strict";
 
-    angular.module('BlurAdmin.pages.about', [])
-      .config(routeConfig);
+    angular.module("BlurAdmin.pages.about", [])
+        .config(routeConfig);
 
-  /** @ngInject */
-  function routeConfig($stateProvider) {
-    $stateProvider
-        .state('about', {
-            templateUrl: 'app/pages/about/about.html',
-            title: 'About',
-            controller: 'aboutCtrl',
-          sidebarMeta: {
-            icon: 'ion-android-home',
-            order: 20,
-          },
-        });
-  }
+    /** @ngInject */
+    function routeConfig($stateProvider) {
+        $stateProvider
+            .state("about",
+            {
+                templateUrl: "app/pages/about/about.html",
+                title: "About",
+                controller: "aboutCtrl",
+                sidebarMeta: {
+                    icon: "ion-information-circled",
+                    order: 20,
+                },
+            });
+    }
 
 })();

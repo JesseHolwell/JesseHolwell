@@ -1,29 +1,30 @@
 /**
  * Animated load block
  */
-(function () {
-  'use strict';
+(function() {
+    "use strict";
 
-  angular.module('BlurAdmin.theme')
-      .directive('zoomIn', zoomIn);
+    angular.module("BlurAdmin.theme")
+        .directive("zoomIn", zoomIn);
 
-  /** @ngInject */
-  function zoomIn($timeout, $rootScope) {
-    return {
-      restrict: 'A',
-      link: function ($scope, elem) {
-        var delay = 1000;
+    /** @ngInject */
+    function zoomIn($timeout, $rootScope) {
+        return {
+            restrict: "A",
+            link: function($scope, elem) {
+                var delay = 1000;
 
-        if ($rootScope.$pageFinishedLoading) {
-          delay = 100;
-        }
+                if ($rootScope.$pageFinishedLoading) {
+                    delay = 100;
+                }
 
-        $timeout(function () {
-          elem.removeClass('full-invisible');
-          elem.addClass('animated zoomIn');
-        }, delay);
-      }
-    };
-  }
+                $timeout(function() {
+                        elem.removeClass("full-invisible");
+                        elem.addClass("animated zoomIn");
+                    },
+                    delay);
+            }
+        };
+    }
 
 })();
