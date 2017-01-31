@@ -8,7 +8,6 @@
   function routeConfig($stateProvider) {
     $stateProvider
         .state('about', {
-            url: '/about',
             templateUrl: 'app/pages/about/about.html',
             title: 'About',
             controller: 'aboutCtrl',

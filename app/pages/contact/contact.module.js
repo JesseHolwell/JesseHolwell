@@ -8,7 +8,6 @@
   function routeConfig($stateProvider) {
     $stateProvider
         .state('contact', {
-            url: '/contact',
             templateUrl: 'app/pages/contact/contact.html',
             title: 'Contact',
             controller: 'contactCtrl',
