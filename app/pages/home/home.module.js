@@ -8,7 +8,7 @@
   function routeConfig($stateProvider) {
     $stateProvider
         .state('home', {
-            templateUrl: 'app/pages/_home/home.html',
+            templateUrl: 'app/pages/home/home.html',
             title: 'Home',
             controller: 'homeCtrl',
           sidebarMeta: {
