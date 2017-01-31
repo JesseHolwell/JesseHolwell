@@ -1,2 +1,2 @@
 # JesseHolwell
-[Personal Website](https://jesseholwell.github.io/#/home)
+[Personal Website](https://jesseholwell.github.io/index.html)
