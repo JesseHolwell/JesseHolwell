@@ -13,6 +13,11 @@ namespace JesseHolwell.Controllers
             return View();
         }
 
+        public ActionResult Portfolio()
+        {
+            return View();
+        }
+
         public ActionResult About()
         {
             ViewBag.Message = "Application description page.";
