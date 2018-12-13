@@ -23,6 +23,13 @@ namespace JesseHolwell
                       "~/Scripts/bootstrap.js",
                       "~/Scripts/respond.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/core").Include(
+                      "~/Scripts/core.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/headroom").Include(
+                      "~/Scripts/headroom.js",
+                      "~/Scripts/headroom.jQuery.js"));
+
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
