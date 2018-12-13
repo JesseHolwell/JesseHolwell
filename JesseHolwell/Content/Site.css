@@ -1,12 +1,12 @@
 ﻿body {
     padding-top: 50px;
-    padding-bottom: 20px;
 }
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 40px;
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -23,15 +23,120 @@ textarea {
     max-width: 280px;
 }
 
-footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
+p {
+    font-size: 18px;
+}
+
+h1, h2, h3, h4, h5 {
+    color: #4A4E69 !important;
+    font-weight: 300;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.navbar {
+    background-image: linear-gradient(45deg, #ef4e7c 0%, #f37055 100%);
+}
+
+.navbar-inverse {
+    border: 0px;
+}
+
+    .navbar-inverse .navbar-nav > li > a,
+    .navbar-inverse .navbar-brand {
+        color: #333;
+    }
+
+    .navbar-inverse .navbar-toggle,
+    .navbar-inverse .navbar-collapse,
+    .navbar-inverse .navbar-form,
+    .navbar-inverse .navbar-toggle .icon-bar {
+        border-color: #eee;
+    }
+
+        .navbar-inverse .navbar-toggle:hover,
+        .navbar-inverse .navbar-toggle:focus {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+
+.btn {
+    white-space: normal;
+}
+
+button:focus,
+button:active {
+    outline: none !important;
+    box-shadow: none;
+}
+
+.navbar-fixed {
+    position: relative;
+}
+
+name {
+    color: deepskyblue;
+}
+
+.section {
+    padding: 80px 60px;
     text-align: center;
+}
+
+.section-gray {
+    background-color: #ccc;
+    clip-path: polygon(0 0%, 100% 10%, 100% 90%, 0% 100%);
+    -webkit-clip-path: polygon(0 0%, 100% 10%, 100% 90%, 0% 100%);
+}
+
+.section-last-angle {
+    padding-bottom: 85px;
+}
+
+.section-dark {
+    background-color: #12191e;
+    color: #ccc;
+    margin-top: -25px;
+}
+
+.section-attributes {
+    max-width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.attributes {
+    text-align: center;
+}
+
+.large-icon {
+    font-size: 40px;
+}
+
+footer {
+    clear: both;
+    text-align: center;
+    position: relative;
+    height: 40px;
+    padding-top: 10px;
+    margin-top: -40px;
+    background-image: linear-gradient(45deg, #ef4e7c 0%, #f37055 100%);
+    color: #333;
 }
 
 .circle {
     border-radius: 50%;
-    width: 100%;
+    width: 300px;
+}
+
+.career-buttons .btn {
+    min-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+@media (min-width: 768px) {
+    .navbar {
+        border-radius: 0px;
+    }
 }
