@@ -103,11 +103,11 @@ name {
     margin-top: -50px;
 }
 
-.section-attributes {
+/*.section-attributes {
     max-width: 1200px;
     margin-right: auto;
     margin-left: auto;
-}
+}*/
 
 .attributes {
     text-align: center;
@@ -135,6 +135,7 @@ footer p {
 .circle {
     border-radius: 50%;
     width: 300px;
+    max-width:100%;
 }
 
 .square {
