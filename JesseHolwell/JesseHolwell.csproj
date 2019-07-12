@@ -152,6 +152,9 @@
     <Content Include="android-chrome-192x192.png" />
     <Content Include="android-chrome-512x512.png" />
     <Content Include="apple-touch-icon.png" />
+    <Content Include="Assets\emotionscanner-screenshot.png" />
+    <Content Include="Assets\fishtank-screenshot.png" />
+    <Content Include="Assets\nothinghurtsrobot-screenshot.png" />
     <Content Include="Assets\selfie.jpg" />
     <Content Include="Assets\iceland.jpg" />
     <Content Include="browserconfig.xml" />
