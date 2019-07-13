@@ -1,0 +1,192 @@
+﻿/* Headroom padding*/
+body {
+    padding-top: 50px;
+}
+
+.body-content {
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 40px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+p {
+    font-size: 18px;
+}
+
+h1, h2, h3, h4, h5 {
+    color: #4A4E69 !important;
+    font-weight: 300;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.navbar {
+    background-image: linear-gradient(45deg, #ef4e7c 0%, #f37055 100%);
+}
+
+.navbar-inverse {
+    border: 0px;
+}
+
+    .navbar-inverse .navbar-nav > li > a:hover,
+    .navbar-inverse .navbar-nav > li > a:focus
+    {
+        color: #ccc;
+    }
+
+    .navbar-inverse .navbar-nav > li > a,
+    .navbar-inverse .navbar-brand {
+        color: #fff;
+    }
+
+    .navbar-inverse .navbar-toggle,
+    .navbar-inverse .navbar-collapse,
+    .navbar-inverse .navbar-form,
+    .navbar-inverse .navbar-toggle .icon-bar {
+        border-color: #eee;
+    }
+
+        .navbar-inverse .navbar-toggle:hover,
+        .navbar-inverse .navbar-toggle:focus {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+
+.btn {
+    white-space: normal;
+}
+
+button:focus,
+button:active {
+    outline: none !important;
+    box-shadow: none;
+}
+
+.navbar-fixed {
+    position: relative;
+}
+
+name {
+    color: deepskyblue;
+}
+
+.section {
+    padding: 80px 60px;
+    text-align: center;
+}
+
+.section-gray {
+    background-color: #ccc;
+    clip-path: polygon(0 0%, 100% 10%, 100% 90%, 0% 100%);
+    -webkit-clip-path: polygon(0 0%, 100% 10%, 100% 90%, 0% 100%);
+}
+
+.section-last-angle {
+    padding-bottom: 100px;
+}
+
+.section-dark {
+    background-color: #12191e;
+    color: #ccc;
+    margin-top: -50px;
+}
+
+/*.section-attributes {
+    max-width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+}*/
+
+.attributes {
+    text-align: center;
+}
+
+.large-icon {
+    font-size: 40px;
+}
+
+footer {
+    clear: both;
+    text-align: center;
+    position: relative;
+    height: 40px;
+    padding-top: 10px;
+    margin-top: -40px;
+    background-image: linear-gradient(45deg, #ef4e7c 0%, #f37055 100%);
+    color: #333;
+}
+
+footer p {
+    margin: 0;
+}
+
+.circle {
+    border-radius: 50%;
+    width: 400px;
+    max-width:100%;
+}
+
+.square {
+    /*height: 150px;*/
+    padding-bottom: 30px;
+}
+
+.square .inside-square {
+    width:100%;
+    height:100%;
+}
+
+    .square h4 {
+        color: deepskyblue !important;
+    }
+
+/*.arrow {
+    opacity: .2;
+    transform: rotate(45deg);
+}
+
+.arrow:hover {
+    transform: rotate(0deg);
+    opacity: 1;
+    cursor: pointer;
+}*/
+
+.portfolio-image {
+    height: 150px;
+    width: 100%;
+    background-color: white;
+
+    object-fit:contain;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+.career-buttons .btn {
+    min-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.career-buttons a {
+    font-size: 20px
+}
+
+@media (min-width: 768px) {
+    .navbar {
+        border-radius: 0px;
+    }
+}
