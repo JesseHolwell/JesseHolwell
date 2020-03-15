@@ -173,6 +173,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Assets\CV_JesseHolwell.pdf" />
+    <None Include="Properties\PublishProfiles\JesseHolwell - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\headroom.js" />
     <Content Include="Scripts\headroom.jQuery.js" />
