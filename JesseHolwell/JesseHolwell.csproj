@@ -156,7 +156,6 @@
     <Content Include="Assets\fishtank-screenshot.png" />
     <Content Include="Assets\nothinghurtsrobot-screenshot.png" />
     <Content Include="Assets\selfie.jpg" />
-    <Content Include="Assets\iceland.jpg" />
     <Content Include="browserconfig.xml" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />

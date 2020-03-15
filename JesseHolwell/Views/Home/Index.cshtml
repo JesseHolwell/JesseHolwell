@@ -5,7 +5,7 @@
 @*<div class="jumbotron">*@
 <div class="section">
     <div data-aos="fade-down" data-aos-anchor-placement="top-center" data-aos-duration="500">
-        <img class="circle" src="~/Assets/selfie.jpg" />
+        <img class="circle box-shadow" src="~/Assets/selfie.jpg" />
 
         <h1>Hello, I'm <name>Jesse Holwell</name>.</h1>
         <h2>I'm a full stack web developer.</h2>
@@ -14,52 +14,83 @@
     </div>
 </div>
 
-<div class="section section-gray">
-    <div id="about" class="container">
-        <div class="row section-attributes" data-aos="fade-up" data-aos-duration="500">
-            <div class="col-sm-4 attributes">
-                <span class="large-icon glyphicon glyphicon-thumbs-up"></span>
-                <p>
-                    Fast, responsive, modern design
-                </p>
-            </div>
-            <div class="col-sm-4 attributes">
-                <span class="large-icon glyphicon glyphicon-wrench"></span>
-                <p>
-                    Tailored to your needs
-                </p>
-            </div>
-            <div class="col-sm-4 attributes">
-                <span class="large-icon glyphicon glyphicon-heart-empty"></span>
-                <p>
-                    Built with love
-                </p>
+<div class="drop-shadow">
+    <div class="section section-gray">
+        <div id="about" class="container">
+            <div class="row section-attributes">
+                <div class="col-sm-4 attributes" data-aos="fade-up" data-aos-duration="300" data-aos-delay="0">
+                    <span class="large-icon glyphicon glyphicon-thumbs-up"></span>
+                    <p>
+                        Fast, responsive, modern design
+                    </p>
+                </div>
+                <div class="col-sm-4 attributes" data-aos="fade-up" data-aos-duration="300" data-aos-delay="100">
+                    <span class="large-icon glyphicon glyphicon-wrench"></span>
+                    <p>
+                        Tailored to your needs
+                    </p>
+                </div>
+                <div class="col-sm-4 attributes" data-aos="fade-up" data-aos-duration="300" data-aos-delay="200">
+                    <span class="large-icon glyphicon glyphicon-heart-empty"></span>
+                    <p>
+                        Built with love
+                    </p>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
 <div class="section">
-    <div id="portfolio" data-aos="fade-up" data-aos-duration="1000">
-        <h2>Recent work</h2>
+    <div id="portfolio">
+        <div data-aos="fade-in" data-aos-duration="1000">
+            <h2>Recent work</h2>
+        </div>
         <div class="container">
             <div class="row">
-                <div class="col-sm-4 square">
-                    <a href="https://fish-tank.azurewebsites.net" class="inside-square">
-                        <img src="~/Assets/fishtank-screenshot.png" class="portfolio-image" />
-                        <h4>Virtual fish tank</h4>
+                @*<div class="col-sm-4 square" data-aos="flip-up" data-aos-duration="500" data-aos-delay="0">
+                        <a href="https://fish-tank.azurewebsites.net" class="inside-square">
+                            <img src="~/Assets/fishtank-screenshot.png" class="portfolio-image" />
+                            <h4>Virtual fish tank</h4>
+                        </a>
+                    </div>*@
+                <div class="col-sm-4 square" data-aos="flip-up" data-aos-duration="500" data-aos-delay="0">
+                    <a href="https://fish-tank.azurewebsites.net">
+                        <div class="panel panel-default hover-up" >
+                            <div class="panel-heading">
+                                <img class="card-img-top" src="~/Assets/fishtank-screenshot.png" alt="Card image">
+                            </div>
+                            <div class="panel-body">
+                                <h4 class="card-title">Vitual fishtank</h4>
+                            </div>
+                            @*<div class="panel-footer">
+                                A Unity experiment
+                            </div>*@
+                            </div>
                     </a>
                 </div>
-                <div class="col-sm-4 square">
-                    <a href="https://emotionscanner.azurewebsites.net/" class="inside-square">
-                        <img src="~/Assets/emotionscanner-screenshot.png" class="portfolio-image"/>
-                        <h4>Emotion scanner</h4>
+                <div class="col-sm-4 square" data-aos="flip-up" data-aos-duration="500" data-aos-delay="250">
+                    <a class="hover-up" href="https://fish-tank.azurewebsites.net">
+                        <div class="panel panel-default hover-up">
+                            <div class="panel-heading">
+                                <img class="card-img-top" src="~/Assets/emotionscanner-screenshot.png" alt="Card image">
+                            </div>
+                            <div class="panel-body">
+                                <h4 class="card-title">Emotion scanner</h4>
+                            </div>
+                        </div>
                     </a>
                 </div>
-                <div class="col-sm-4 square">
-                    <a href="https://nothinghurtsrobot.azurewebsites.net" class="inside-square">
-                        <img src="~/Assets/nothinghurtsrobot-screenshot.png" class="portfolio-image" />
-                        <h4>Nothing hurts robot band site</h4>
+                <div class="col-sm-4 square" data-aos="flip-up" data-aos-duration="500" data-aos-delay="500">
+                    <a class="hover-up" href="https://fish-tank.azurewebsites.net">
+                        <div class="panel panel-default hover-up">
+                            <div class="panel-heading">
+                                <img class="card-img-top" src="~/Assets/nothinghurtsrobot-screenshot.png" alt="Card image">
+                            </div>
+                            <div class="panel-body">
+                                <h4 class="card-title">Nothing hurts robot</h4>
+                            </div>
+                        </div>
                     </a>
                 </div>
             </div>
@@ -67,25 +98,29 @@
     </div>
 </div>
 
-<div class="section section-gray section-last-angle">
-    <div id="career" data-aos="fade-up" data-aos-duration="1000">
-        <h2>Career</h2>
-        <div class="container">
-            <div class="row career-buttons">
-                <div class="col-sm-4">
-                    <a class="btn btn-default" href="https://www.linkedin.com/in/jesseholwell/">
-                        <span class="fab fa-linkedin"></span> Linkedin
-                    </a>
-                </div>
-                <div class="col-sm-4">
-                    <a class="btn btn-default" href="https://github.com/JesseHolwell">
-                        <span class="fab fa-github"></span> GitHub
-                    </a>
-                </div>
-                <div class="col-sm-4">
-                    <a class="btn btn-default" href="~/Assets/CV_JesseHolwell.pdf">
-                        <span class="fas fa-file-download"></span> CV
-                    </a>
+<div class="drop-shadow">
+    <div class="section section-gray section-last-angle">
+        <div id="career">
+            <div data-aos="fade-in" data-aos-duration="1000">
+                <h2>Career</h2>
+            </div>
+            <div class="container">
+                <div class="row career-buttons">
+                    <div class="col-sm-4" data-aos="fade-up" data-aos-duration="400" data-aos-delay="0">
+                        <a class="btn btn-default" href="https://www.linkedin.com/in/jesseholwell/">
+                            <span class="fab fa-linkedin"></span> Linkedin
+                        </a>
+                    </div>
+                    <div class="col-sm-4" data-aos="fade-up" data-aos-duration="400" data-aos-delay="150">
+                        <a class="btn btn-default" href="https://github.com/JesseHolwell">
+                            <span class="fab fa-github"></span> GitHub
+                        </a>
+                    </div>
+                    <div class="col-sm-4" data-aos="fade-up" data-aos-duration="400" data-aos-delay="300">
+                        <a class="btn btn-default" href="~/Assets/CV_JesseHolwell.pdf">
+                            <span class="fas fa-file-download"></span> CV
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -94,7 +129,7 @@
 
 
 <div class="section section-dark">
-    <div id="contact" data-aos="fade-up" data-aos-duration="1000">
+    <div id="contact" data-aos="fade-in" data-aos-duration="500">
         <h2>Contact</h2>
         <p>I'm available for work. Get in touch.</p>
         @*<p><a href="">Enquire</a></p>*@

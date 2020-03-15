@@ -36,6 +36,10 @@ h1, h2, h3, h4, h5 {
     background-image: linear-gradient(45deg, #ef4e7c 0%, #f37055 100%);
 }
 
+.navbar  a{
+    color:#ddd;
+}
+
 .navbar-inverse {
     border: 0px;
 }
@@ -108,12 +112,30 @@ name {
     margin-left: auto;
 }*/
 
+#portfolio .panel-heading {
+    padding:0;
+}
+
+#portfolio .panel {
+    overflow: hidden;
+    border-radius: 8px;
+}
+
 .attributes {
     text-align: center;
 }
 
 .large-icon {
     font-size: 40px;
+}
+
+.hover-up {
+    transition: margin-top 0.2s;
+}
+
+.hover-up:hover {
+    position: relative;
+    margin-top: -5px;
 }
 
 footer {
@@ -142,10 +164,14 @@ footer p {
     padding-bottom: 30px;
 }
 
-.square .inside-square {
-    width:100%;
-    height:100%;
-}
+    .square img {
+        width:100%;
+    }
+
+    .square .inside-square {
+        width: 100%;
+        height: 100%;
+    }
 
     .square h4 {
         color: deepskyblue !important;
@@ -185,8 +211,20 @@ footer p {
     font-size: 20px
 }
 
-@media (min-width: 768px) {
-    .navbar {
+.box-shadow {
+    box-shadow: -1px 6px 10px rgba(25, 25, 25, 0.5);
+}
+
+.drop-shadow {
+    filter: drop-shadow(-1px 6px 5px rgba(25, 25, 25, 0.5));
+}
+
+@media (max-width: 768px) {
+    /*.navbar {
         border-radius: 0px;
+    }*/
+
+    [data-aos-delay] {
+        transition-delay: 0s !important;
     }
 }
