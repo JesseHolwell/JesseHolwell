@@ -1,1 +1,1 @@
-[www.jesseholwell.com](https://www.jesseholwell.com)
+[jesseholwell.com](https://jesseholwell.com)
